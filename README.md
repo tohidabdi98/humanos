@@ -1,6 +1,6 @@
 # HumanOS
 
-HumanOS is a Personal Growth Operating System.
+HumanOS helps you build better habits, achieve meaningful goals, and understand your personal growth.
 
 Its mission is to help people record, understand, and improve their lives through evidence-based tracking, explainable analytics, and lifelong history.
 
