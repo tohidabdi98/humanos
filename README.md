@@ -1,5 +1,14 @@
 # HumanOS
 
-HumanOS helps you build better habits, achieve meaningful goals, and understand your personal growth.
+HumanOS is a Personal Growth Operating System designed to help people become the person they aspire to be through evidence-based progress.
 
-Its mission is to help people record, understand, and improve their lives through evidence-based tracking, explainable analytics, and lifelong history.
+## Status
+
+🚧 Under Development
+
+## Tech Stack
+
+- Java 26
+- Spring Boot
+- PostgreSQL
+- Maven
