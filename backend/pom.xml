@@ -18,14 +18,24 @@
 
     <properties>
         <java.version>26</java.version>
+        <project.build.sourceEncoding>
+            UTF-8
+        </project.build.sourceEncoding>
     </properties>
 
     <modules>
         <module>humanos-domain</module>
-        <module>humanos-application</module>
-        <module>humanos-api</module>
-        <module>humanos-infrastructure</module>
-        <module>humanos-bootstrap</module>
+        <!-- <module>humanos-application</module> -->
+        <!-- <module>humanos-api</module> -->
+        <!-- <module>humanos-infrastructure</module> -->
+        <!-- <module>humanos-bootstrap</module> -->
     </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.4</version>
+        <relativePath/>
+    </parent>
 
 </project>
