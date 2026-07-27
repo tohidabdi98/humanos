@@ -25,7 +25,7 @@
 
     <modules>
         <module>humanos-domain</module>
-        <!-- <module>humanos-application</module> -->
+         <module>humanos-application</module>
          <module>humanos-api</module>
         <!-- <module>humanos-infrastructure</module> -->
          <module>humanos-bootstrap</module>
