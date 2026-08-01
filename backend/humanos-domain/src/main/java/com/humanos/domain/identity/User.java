@@ -45,6 +45,14 @@ public class User {
         );
     }
 
+    public static User reconstruct(
+            UUID id,
+            String username,
+            String email
+    ) {
+        return new User(id, username, email);
+    }
+
     public String getUsername() {
         return username;
     }

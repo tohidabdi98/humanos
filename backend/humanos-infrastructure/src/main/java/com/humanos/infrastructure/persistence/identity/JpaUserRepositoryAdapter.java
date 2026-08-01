@@ -26,7 +26,8 @@ public class JpaUserRepositoryAdapter implements UserRepository {
 
         UserEntity saved = repository.save(entity);
 
-        return User.create(
+        return User.reconstruct(
+                saved.getId(),
                 saved.getUsername(),
                 saved.getEmail()
         );
@@ -37,7 +38,8 @@ public class JpaUserRepositoryAdapter implements UserRepository {
 
         return repository.findById(id)
                 .map(entity ->
-                        User.create(
+                        User.reconstruct(
+                                entity.getId(),
                                 entity.getUsername(),
                                 entity.getEmail()
                         )
