@@ -1,0 +1,17 @@
+services:
+
+  postgres:
+    image: postgres:17
+    container_name: humanos-postgres
+    environment:
+      POSTGRES_DB: humanos
+      POSTGRES_USER: humanos
+      POSTGRES_PASSWORD: humanos_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - humanos-postgres-data:/var/lib/postgresql/data
+
+
+volumes:
+  humanos-postgres-data:
