@@ -3,8 +3,10 @@ package com.humanos.api.common;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.http.ResponseEntity;
 import java.util.HashMap;
 import java.util.Map;
+import com.humanos.application.common.EmailAlreadyExistsException;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
@@ -29,5 +31,21 @@ public class GlobalExceptionHandler {
                 "Validation failed",
                 errors
         );
+    }
+
+    @ExceptionHandler(EmailAlreadyExistsException.class)
+    public ResponseEntity<ApiErrorResponse> handleEmailAlreadyExists(
+            EmailAlreadyExistsException exception
+    ) {
+        ApiErrorResponse response =
+                new ApiErrorResponse(
+                        409,
+                        exception.getMessage(),
+                        Map.of()
+                );
+
+        return ResponseEntity
+                .status(409)
+                .body(response);
     }
 }

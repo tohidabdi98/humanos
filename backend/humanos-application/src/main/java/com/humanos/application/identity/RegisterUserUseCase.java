@@ -1,6 +1,7 @@
 package com.humanos.application.identity;
 
 import com.humanos.domain.identity.User;
+import com.humanos.application.common.EmailAlreadyExistsException;
 
 public class RegisterUserUseCase {
     private final UserRepository userRepository;
@@ -9,7 +10,14 @@ public class RegisterUserUseCase {
         this.userRepository = userRepository;
     }
 
-    public User execute(String username, String email) {
+    public User execute(
+            String username,
+            String email
+    ) {
+        if (userRepository.existsByEmail(email)) {
+            throw new EmailAlreadyExistsException(email);
+        }
+
         User user = User.create(username, email);
         return userRepository.save(user);
     }
