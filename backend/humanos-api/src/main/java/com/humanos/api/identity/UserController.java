@@ -5,6 +5,7 @@ import com.humanos.application.identity.GetUserUseCase;
 import com.humanos.domain.identity.User;
 import org.springframework.web.bind.annotation.*;
 import java.util.UUID;
+import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/v1/users")
@@ -22,7 +23,7 @@ public class UserController {
     }
 
     @PostMapping
-    public UserResponse register(@RequestBody RegisterUserRequest request) {
+    public UserResponse register(@RequestBody @Valid RegisterUserRequest request) {
         User user =
                 registerUserUseCase.execute(
                         request.username(),
