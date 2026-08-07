@@ -8,7 +8,7 @@ HumanOS is a Personal Growth Operating System designed to help people become the
 
 ## Tech Stack
 
-- Java 26
+- Java 21
 - Spring Boot
 - PostgreSQL
 - Maven
