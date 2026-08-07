@@ -1,8 +1,5 @@
--- CREATE TABLE users (
---     id UUID PRIMARY KEY,
---     username VARCHAR(30) NOT NULL,
---     email VARCHAR(255) NOT NULL
--- );
-
---HumanOS existing database baseline.
--- The users table already exists.
+CREATE TABLE users (
+    id UUID PRIMARY KEY,
+    username VARCHAR(30) NOT NULL,
+    email VARCHAR(255) NOT NULL
+);

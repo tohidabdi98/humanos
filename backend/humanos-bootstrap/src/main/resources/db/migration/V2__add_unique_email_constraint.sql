@@ -1,2 +1,2 @@
 ALTER TABLE users
-ADD CONSTRAINT uk_users_email UNIQUE (email);
+ADD CONSTRAINT unique_email UNIQUE (email);
